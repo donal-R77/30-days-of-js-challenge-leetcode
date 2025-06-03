@@ -4,18 +4,18 @@
  */
 var expect = function (val) {
   let value_1 = val;
-  let toBe = function (value) {
-    if (value_1 === value) {
-      return { "value'": true };
-    }
-    return { error: "Not Equal" };
+        let toBe = function (value) {
+            if (value_1 === value) {
+                return  true ;
+            }
+                throw new Error("Not Equal"); ;
   };
-  let notToBe = function(value) {
-     if (value_1 !== value) {
-      return { "value'": true };
-    }
-    return { error: "Not Equal" };
-  }
+        let notToBe = function(value) {
+             if (value_1 !== value) {
+                return  true;
+            }
+                throw new Error("Equal") ;
+  };
   return { toBe, notToBe };
 };
 
