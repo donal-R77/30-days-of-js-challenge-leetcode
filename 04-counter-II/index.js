@@ -4,28 +4,29 @@
  */
 var createCounter = function(init) {
     let valIncrement = init;
-    let valDecrement = init;
     let resetValue = init;
     let increment = function() {
             return ++valIncrement;
         }
     let decrement = function() {
-            return --valDecrement;
+            return --valIncrement;
         }
     let reset = function() {
-        return resetValue;
+        return valIncrement = resetValue;
     }
     return {increment, decrement, reset};
 };
-const counter = createCounter(5);
-console.log(counter.increment());
-console.log(counter.decrement());
-console.log(counter.reset());
+// const counter = createCounter(0);
+// console.log(counter.increment()); // 1
+// console.log(counter.increment()); // 2
+// console.log(counter.decrement()); // 1
+// console.log(counter.reset()); // 0
+// console.log(counter.reset()); // 0
 
 
-/**
- * const counter = createCounter(5)
- * counter.increment(); // 6
- * counter.reset(); // 5
- * counter.decrement(); // 4
- */
+
+  const counter = createCounter(5)
+ console.log(counter.increment()); // 6
+  console.log(counter.reset()); // 5
+  console.log(counter.decrement()); // 4
+ 
