@@ -3,16 +3,16 @@
  * @return { increment: Function, decrement: Function, reset: Function }
  */
 var createCounter = function(init) {
-    let valIncrement = init;
+    let valIncDec = init;
     let resetValue = init;
     let increment = function() {
-            return ++valIncrement;
+            return ++valIncDec;
         }
     let decrement = function() {
-            return --valIncrement;
+            return --valIncDec;
         }
     let reset = function() {
-        return valIncrement = resetValue;
+        return valIncDec = resetValue;
     }
     return {increment, decrement, reset};
 };
@@ -25,8 +25,8 @@ var createCounter = function(init) {
 
 
 
-  const counter = createCounter(5)
- console.log(counter.increment()); // 6
-  console.log(counter.reset()); // 5
-  console.log(counter.decrement()); // 4
+//   const counter = createCounter(5)
+//  console.log(counter.increment()); // 6
+//   console.log(counter.reset()); // 5
+//   console.log(counter.decrement()); // 4
  
